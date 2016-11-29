@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <h1>Mercedes</h1>
+    
+    <!-- slideshow -->
+  <div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="images/merc2.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="images/merc1.jpg" alt="Second" class="slide" />
+	</div>
+</div>	
+    
+    <!-- personal info app -->
+    <div id = "appOne">
+        <div class="w3-card-4 constrain">
+            <div class="w3-container w3-theme-d4">
+                <h2 id = "personalHeader">Personal Information</h2> 
+            </div>
+            <div class="w3-row">
+                <div class="w3-col m4 l8">
+                    <form class="w3-container" action="#" id="dataform">
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>First Name</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="first" id="first" type="text" onblur="checkFirst()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Last Name</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="last" id="last" type="text" onblur="checkLast()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Email</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="email" id="email" type="text" onblur="checkEmail()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Adress</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>City</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>State</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Zipcode</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="zipcode" id="zipcode" type="text" onblur="checkZipcode()">
+                            </label>
+                        </p>
+                        <p>
+                            <button class="w3-btn w3-theme-d4" type=r eset>Submit </button>
+                        </p>
+                    </form>
+                </div>
+                <div class="w3-col m4 l4">
+                    <p id="errorMsg">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- custom app -->
+    <div id="second"> </div>
+</body>
+
+</html>
