@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <div id = "HeadCSS">
+    <h1>Mercedes</h1>
+    </div>
+    <div id = "CusCSS">
+    <h2>Custom Orders</h2>
+    </div>
+    <!-- slideshow -->
+  <div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="images/merc2.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="images/merc1.jpg" alt="Second" class="slide" />
+	</div>
+</div>
+<div id = "Para">
+    <p>We hope we can assist you in the process of creating your own one of one Mercedes.<br>Pick between our models and and choose a color so we can get a rough understanding of what youll be<br> looking for from us. Below the Custom Options fill out some basic personal information for us<br> so we can contact you and hope to get you closer to your own personal Mercedes.
+    </p>
+    </div>
+    
+    <!-- personal info app -->
+    <div id = "appOne">
+        <div class="w3-card-4 constrain">
+            
+    <!-- Application 1 -->
+    <div id = "Option" class="w3-card-4 constrain" ng-app="myApp" ng-controller="myCtrl">
+            <div>
+            <h2 id = "personalHeader">Custom Option</h2> 
+            </div>
+        
+        <div id = "Option"  class="w3-card-4 constrain"ng-app="myApp" ng-controller="myCtrl">
+        <p class="w3-label">Model Select:</p>
+        <select ng-model="selectedCar">
+            <option ng-repeat="x in cars" value="{{x.model}}">{{x.model}}</option>
+        </select>
+        
+        <div id = "Option" ng-app="myApp" ng-controller="myCtrl">
+        <p class="w3-label">Color Select:</p>
+        <select ng-model="selectedCar">
+            <option ng-repeat="x in cars" value="{{x.color}}">{{x.color}}</option>
+        </select>
+        </div>
+        
+        <div id = "TransCSS" ng-app="myApp" ng-controller="myCtrl">
+        <p class="w3-label">Transmission Select:</p>
+        <select ng-model="selectedCar">
+            <option ng-repeat="x in cars" value="{{x.trans}}">{{x.trans}}</option>
+        </select>
+        </div>
+
+        
+        </div>
+            
+            <!-- ^^^Application 1^^^ -->
+            
+            <div class="w3-container w3-theme-d4">
+                <h2 id = "personalHeader">Personal Information</h2> 
+            </div>
+            <div class="w3-row">
+                <div class="w3-col m4 l8">
+                    <form class="w3-container" action="#" id="dataform">
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>First Name</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="first" id="first" type="text" onblur="checkFirst()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Last Name</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="last" id="last" type="text" onblur="checkLast()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Email</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="email" id="email" type="text" onblur="checkEmail()">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Adress</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>City</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>State</b>
+                                <input class="w3-input w3-border w3-theme-l4" type="text">
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label w3-text-theme"><b>Zipcode</b>
+                                <input class="w3-input w3-border w3-theme-l4" name="zipcode" id="zipcode" type="text" onblur="checkZipcode()">
+                            </label>
+                        </p>
+                        <p>
+                            <button class="w3-btn w3-theme-d4" type= "reset" onclick="myFunction()">Submit </button>
+                        </p>
+                    </form>
+                </div>
+                <div class="w3-col m4 l4">
+                    <p id="errorMsg">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- custom app -->
+    <div id="second"> </div>
+</body>
+
+</html>
